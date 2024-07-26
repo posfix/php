@@ -6,7 +6,6 @@ class PostAuthRequest extends BaseRequest
     public $Amount;
     public $ClientIp;
 
-
     public static function execute(PostAuthRequest $request, Settings $settings)
     {
         $settings->transactionDate = Helper::GetTransactionDateString();
