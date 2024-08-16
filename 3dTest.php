@@ -2,12 +2,12 @@
 ini_set ( 'display_errors', 1 );
 error_reporting ( E_ERROR );
 
-include ("settings.php");
-include ("helper.php");
-include ("base.php");
-include ("restHttpCaller.php");
-include ("Api3DPaymentRequest.php");
-include ("ThreeDPaymentCompleteRequest.php");
+include_once ("settings.php");
+include_once ("helper.php");
+include_once ("base.php");
+include_once ("restHttpCaller.php");
+include_once ("Api3DPaymentRequest.php");
+include_once ("ThreeDPaymentCompleteRequest.php");
 
 $settings = new Settings ();
 

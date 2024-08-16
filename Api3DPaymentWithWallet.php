@@ -137,8 +137,8 @@
 	$request->CardId = $_POST["cardId"];
 	//$request->SuccessUrl = Helper::getCurrentUrl() . "/-php/Api3DPaymentResult.php";;
 	//$request->FailUrl = Helper::getCurrentUrl() . "/-php/Api3DPaymentResult.php";
-	$request->SuccessUrl = "https://apitest.posfix.com.tr/rest/payment/threed/test/result";
-	$request->FailUrl = "https://apitest.posfix.com.tr/rest/payment/threed/test/result";
+	$request->SuccessUrl = "https://api.posfix.com.tr/rest/payment/threed/test/result";
+	$request->FailUrl = "https://api.posfix.com.tr/rest/payment/threed/test/result";
 
 
 
