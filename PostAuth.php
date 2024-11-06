@@ -66,7 +66,7 @@
     $request = new PostAuthRequest();
     $request->OrderId = $_POST['orderId'];
     $request->Mode = $settings->Mode;
-    $request->Amount = $_POST['amount']; // 100 tL
+    $request->Amount = $_POST['amount'];
     $request->ClientIp = "127.0.0.1";
 
     $response = PostAuthRequest::execute($request, $settings);

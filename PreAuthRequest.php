@@ -1,9 +1,5 @@
 <?php
 
-
-//Müşteri bilgilerinin bulunduğı sınıfı temsil eder.
-
-
 class PreAuthRequest extends BaseRequest
 {
     public $Threed;
@@ -21,7 +17,6 @@ class PreAuthRequest extends BaseRequest
     public $Products;
     public $Purchaser;
 
-
     public static function execute(PreAuthRequest $request, Settings $settings)
     {
         $settings->transactionDate = Helper::GetTransactionDateString();
@@ -31,7 +26,6 @@ class PreAuthRequest extends BaseRequest
 
     public function toJsonString()
     {
-
         $products = [];
         foreach ($this->Products as $product) {
             $tmp['productCode'] = $product->Code;
@@ -91,7 +85,6 @@ class PreAuthRequest extends BaseRequest
 
 }
 
-
 class Purchaser
 {
     public $Name;
@@ -105,8 +98,6 @@ class Purchaser
     public $ShippingAddress;
 
 }
-
-//Müşteri adresi bilgilerinin bulunduğı sınıfı temsil eder.
 
 class PurchaserAddress
 {
@@ -124,16 +115,10 @@ class PurchaserAddress
     public $PhoneNumber;
 }
 
-
-//Ürün bilgilerinin bulunduğu sınıfı temsil eder.
-
 class Product
 {
     public $Code;
-
     public $Title;
-
     public $Quantity;
-
     public $Price;
 }
