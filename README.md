@@ -5,7 +5,7 @@ PosFix PHP Client Kütüphanesidir. PosFix API'lerine çok hızlı bir şekilde 
 hesabınızı açabilirsiniz.
 
 
-### Entegrasyon sürecinde dikkat edilecek noktalar
+## Entegrasyon sürecinde dikkat edilecek noktalar
 
 PosFix servislerini kullanabilmek için [PosFix'e](https://www.posfix.com.tr) üye olmalısınız. Üye olduktan sonra Mağaza Listesi > Detay sayfası içerisindeki Public ve Private Key sizinle paylaşılacaktır.Paylaşılan bu anahtarları -php projesinde Settings classda yer alan publicKey ve privateKey alanlarına eklemeniz gerekmektedir.
 ```php
@@ -22,6 +22,11 @@ $this->BaseUrl = "https://api.posfix.com.tr/"; //PosFix web servisleri API url'l
 
 PosFix örnek projelerinin amacı, yazılım geliştiricilere PosFix servislerine entegre olabilecek bir proje örneği sunmak ve entegrasyon adımlarının daha iyi anlaşılmasını sağlamaktır.
 Projeleri doğrudan canlı ortamınıza alarak kod değişimi yapmadan kullanmanız için desteğimiz bulunmamaktadır. **Projeyi bir eğitsel kaynak (tutorial) olarak kullanınız.**
+
+### Gerekli Teknolojiler
+* PHP CLI Interpreter : 8.3.9
+* PHP Language Level : 5.6
+* XAMPP 
 
 ## Test Kartları
 
