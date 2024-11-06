@@ -165,6 +165,7 @@
         </div>
     </form>
 
+
 <?php if (!empty($_POST)): ?>
     <?php
 
@@ -188,7 +189,7 @@
 
     $request->Purchaser = new Purchaser();
     $request->Purchaser->Name = "Ahmet";
-    $request->Purchaser->SurName = "Veli";
+    $request->Purchaser->Surname = "Veli";
     $request->Purchaser->BirthDate = "1986-07-11";
     $request->Purchaser->Email = "ahmet@veli.com";
     $request->Purchaser->GsmPhone = "5881231212";
@@ -197,7 +198,7 @@
 
     $request->Purchaser->InvoiceAddress = new PurchaserAddress();
     $request->Purchaser->InvoiceAddress->Name = "Ahmet";
-    $request->Purchaser->InvoiceAddress->SurName = "Veli";
+    $request->Purchaser->InvoiceAddress->Surname = "Veli";
     $request->Purchaser->InvoiceAddress->Address = "Mevlüt Pehlivan Mah-> PosFix Plaza Şişli";
     $request->Purchaser->InvoiceAddress->ZipCode = "34782";
     $request->Purchaser->InvoiceAddress->CityCode = "34";
@@ -210,7 +211,7 @@
 
     $request->Purchaser->ShippingAddress = new PurchaserAddress();
     $request->Purchaser->ShippingAddress->Name = "Ahmet";
-    $request->Purchaser->ShippingAddress->SurName = "Veli";
+    $request->Purchaser->ShippingAddress->Surname = "Veli";
     $request->Purchaser->ShippingAddress->Address = "Mevlüt Pehlivan Mah-> PosFix Plaza Şişli";
     $request->Purchaser->ShippingAddress->ZipCode = "34782";
     $request->Purchaser->ShippingAddress->CityCode = "34";

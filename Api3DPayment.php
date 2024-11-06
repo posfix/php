@@ -159,8 +159,8 @@
 	$request->CardExpireYear = $_POST["year"];
 	$request->Installment = $_POST["installment"];
 	$request->Cvc = $_POST["cvc"];
-	$request->SuccessUrl = "https://apitest.posfix.com.tr/rest/payment/threed/test/result";
-	$request->FailUrl = "https://apitest.posfix.com.tr/rest/payment/threed/test/result";
+	$request->SuccessUrl = "https://api.posfix.com.tr/rest/payment/threed/test/result";
+	$request->FailUrl = "https://api.posfix.com.tr/rest/payment/threed/test/result";
 	$request->VendorId = "";
 
 	// region Sipariş veren bilgileri

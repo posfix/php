@@ -75,7 +75,7 @@
 		<label style="font-weight: bold;">Amount :</label> 100000<br>
 		<label style="font-weight: bold;">Allowed Installments :</label> 1,2,3,4,5,6,7,8,9,10,11,12<br>
 		<label style="font-weight: bold;">CallbackUrl :</label>
-		https://apitest.posfix.com.tr/rest/payment/threed/test/result
+		https://api.posfix.com.tr/rest/payment/threed/test/result
 		<br>
 
 	</fieldset>
@@ -101,7 +101,7 @@
 	$request->Mode = $settings->Mode;
 	$request->Amount = "10000"; // 100 tL
 	$request->Threed = "false";
-	$request->CallbackUrl = "https://apitest.posfix.com.tr/rest/payment/threed/test/result";
+	$request->CallbackUrl = "https://api.posfix.com.tr/rest/payment/threed/test/result";
 	$request->VendorId = "10100";
 	$request->AllowedInstallments = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
 

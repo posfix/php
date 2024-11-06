@@ -1,5 +1,8 @@
 <?php
 
+//Müşteri bilgilerinin bulunduğı sınıfı temsil eder.
+
+
 class PreAuthRequest extends BaseRequest
 {
     public $Threed;
@@ -20,7 +23,7 @@ class PreAuthRequest extends BaseRequest
     public static function execute(PreAuthRequest $request, Settings $settings)
     {
         $settings->transactionDate = Helper::GetTransactionDateString();
-        $settings->HashString = $settings->PrivateKey . $request->OrderId . $request->Amount . $request->Mode . $request->CardOwnerName . $request->CardNumber . $request->CardExpireMonth . $request->CardExpireYear . $request->CardCvc . $request->UserId . $request->CardId . $request->Purchaser->Name . $request->Purchaser->SurName . $request->Purchaser->Email . $settings->transactionDate;
+        $settings->HashString = $settings->PrivateKey . $request->OrderId . $request->Amount . $request->Mode . $request->CardOwnerName . $request->CardNumber . $request->CardExpireMonth . $request->CardExpireYear . $request->CardCvc . $request->UserId . $request->CardId . $request->Purchaser->Name . $request->Purchaser->Surname . $request->Purchaser->Email . $settings->transactionDate;
         return restHttpCaller::post($settings->BaseUrl . "rest/payment/preauth", Helper::GetHttpHeaders($settings, "application/json"), $request->toJsonString());
     }
 
@@ -56,7 +59,7 @@ class PreAuthRequest extends BaseRequest
                 "clientIp" => $this->Purchaser->ClientIp,
                 "invoiceAddress" => [
                     "name" => $this->Purchaser->InvoiceAddress->Name,
-                    "surname" => $this->Purchaser->InvoiceAddress->SurName,
+                    "surname" => $this->Purchaser->InvoiceAddress->Surname,
                     "address" => $this->Purchaser->InvoiceAddress->Address,
                     "zipcode" => $this->Purchaser->InvoiceAddress->ZipCode,
                     "city" => $this->Purchaser->InvoiceAddress->CityCode,
@@ -69,7 +72,7 @@ class PreAuthRequest extends BaseRequest
                 ],
                 "shippingAddress" => [
                     "name" => $this->Purchaser->ShippingAddress->Name,
-                    "surname" => $this->Purchaser->ShippingAddress->SurName,
+                    "surname" => $this->Purchaser->ShippingAddress->Surname,
                     "address" => $this->Purchaser->ShippingAddress->Address,
                     "zipcode" => $this->Purchaser->ShippingAddress->ZipCode,
                     "city" => $this->Purchaser->ShippingAddress->CityCode,
@@ -83,42 +86,4 @@ class PreAuthRequest extends BaseRequest
     }
 
 
-}
-
-class Purchaser
-{
-    public $Name;
-    public $Surname;
-    public $BirthDate;
-    public $Email;
-    public $GsmPhone;
-    public $IdentityNumber;
-    public $ClientIp;
-    public $InvoiceAddress;
-    public $ShippingAddress;
-
-}
-
-class PurchaserAddress
-{
-
-    public $Name;
-    public $Surname;
-    public $Address;
-    public $ZipCode;
-    public $CityCode;
-    public $IdentityNumber;
-    public $CountryCode;
-    public $TaxNumber;
-    public $TaxOffice;
-    public $CompanyName;
-    public $PhoneNumber;
-}
-
-class Product
-{
-    public $Code;
-    public $Title;
-    public $Quantity;
-    public $Price;
 }
