@@ -2,24 +2,26 @@
 ini_set('display_errors',1);
 error_reporting(E_ERROR );
 
-include ("Settings.php");
-include ("helper.php");
-include ("base.php");
-include ("restHttpCaller.php");
-include ("BinNumberInquiryRequest.php");
-include ("BinNumberInquiryRequestV4.php");
-include ("BankCardInquiryRequest.php");
-include ("ApiPaymentRequest.php");
-include ("Api3DPaymentRequest.php");
-include ("BankCardCreateRequest.php");
-include ("BankCardDeleteRequest.php");
-include ("PaymentInquiryRequest.php");
-include ("LinkPaymentCreateRequest.php");
-include ("LinkPaymentListRequest.php");
-include ("LinkPaymentDeleteRequest.php");
-include("PaymentRefundInquiryRequest.php");
-include("CreatePaymentRefundRequest.php");
-include("CheckoutFormRequest.php");
+include_once("Settings.php");
+include_once ("helper.php");
+include_once ("base.php");
+include_once ("restHttpCaller.php");
+include_once ("BinNumberInquiryRequest.php");
+include_once ("BinNumberInquiryRequestV4.php");
+include_once ("BankCardInquiryRequest.php");
+include_once ("ApiPaymentRequest.php");
+include_once ("Api3DPaymentRequest.php");
+include_once ("BankCardCreateRequest.php");
+include_once ("BankCardDeleteRequest.php");
+include_once ("PaymentInquiryRequest.php");
+include_once ("LinkPaymentCreateRequest.php");
+include_once ("LinkPaymentListRequest.php");
+include_once ("LinkPaymentDeleteRequest.php");
+include_once("PaymentRefundInquiryRequest.php");
+include_once("CreatePaymentRefundRequest.php");
+include_once("CheckoutFormCreateRequest.php");
+include_once ("PreAuthRequest.php");
+include_once ("PostAuthRequest.php");
 
 ?>
 
@@ -49,7 +51,9 @@ include("CheckoutFormRequest.php");
                 <ul class="nav navbar-nav">
                     <li><a href="Api3DPayment.php">Tek Adımda 3D Ödeme</a></li>
                     <li><a href="ApiPayment.php">(Non-3d) Ödeme</a></li>
+                    <li><a href="PreAuth.php">Ön Otorizasyon Açma</a></li>
                     <li><a href="PaymentInquiry.php">Ödeme Sorgulama</a></li>
+                    <li><a href="PostAuth.php">Ön Otorizasyon Kapama</a></li>
                     <li><a href="binInquiry.php">Bin Sorgulama</a></li>
                     <li><a href="binInquiryV4.php">Bin Sorgulama V4</a></li>
                     <li><a href="AddCardToWallet.php">Cüzdana Kart Ekle </a></li>

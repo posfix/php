@@ -2,16 +2,16 @@
 ini_set('display_errors', 1);
 error_reporting(E_ERROR);
 
-include("settings.php");
-include("helper.php");
-include("base.php");
-include("restHttpCaller.php");
-include("BinNumberInquiryRequest.php");
-include("BankCardInquiryRequest.php");
-include("ApiPaymentRequest.php");
-include("BankCardCreateRequest.php");
-include("BankCardDeleteRequest.php");
-include("PaymentInquiryRequest.php");
+include_once("settings.php");
+include_once("helper.php");
+include_once("base.php");
+include_once("restHttpCaller.php");
+include_once("BinNumberInquiryRequest.php");
+include_once("BankCardInquiryRequest.php");
+include_once("ApiPaymentRequest.php");
+include_once("BankCardCreateRequest.php");
+include_once("BankCardDeleteRequest.php");
+include_once("PaymentInquiryRequest.php");
 
 
 $settings = new Settings();
@@ -22,6 +22,7 @@ $response = BinNumberInquiryRequest::execute($request, $settings);
 print "Bin Inqury \xA" . $response . "\xA" . "\xA";
 
 $request = new PaymentInquiryRequest();
+$orderId = 1;
 $request->orderId = $orderId;
 $request->Echo = "Echo";
 $request->Mode = $settings->Mode;
